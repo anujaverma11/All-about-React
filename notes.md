@@ -1,6 +1,7 @@
-#### Udemy React Tutorial
+#### React + Flux
 
-ste.grider@gmail.com
+
+
 
 What is JSX?
 
