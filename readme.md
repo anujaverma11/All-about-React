@@ -24,6 +24,6 @@ JSX Extenstion of Javascript. It allows you to write HTML inside your Javascript
 - [Dynamic Component](\badge.html)
 
 ##### Example of Nested Component
-- []()
+- [Nested Component](\nested.html)
 
 
