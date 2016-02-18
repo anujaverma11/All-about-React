@@ -1,3 +1,6 @@
+[Give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes)
+
+
 #### React + Flux
 
 ##### Why React?
@@ -6,7 +9,6 @@
 - When data changes react simple hit "refresh" button and only update the changed parts.
 - React is all about building reusable components.
 
-- [Give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes)
 
 ##### Why Flux?
 
@@ -25,5 +27,10 @@ JSX Extenstion of Javascript. It allows you to write HTML inside your Javascript
 
 ##### Example of Nested Component
 - [Nested Component](\nested.html)
+
+##### Example of rendering List of Components
+- [Thumbnail List](\thumbnail-list.html)
+
+
 
 

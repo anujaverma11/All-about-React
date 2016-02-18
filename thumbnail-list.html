@@ -1,0 +1,93 @@
+<!-- Composition is an idea of placing one component inside another -->
+<head>
+<!-- React -->
+<script src="https://fb.me/react-0.14.7.js"></script>
+<script src="https://fb.me/react-dom-0.14.7.js"></script>
+
+<!-- JSX -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 target">
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+<!-- JSXTransformer scans the document and finds any tag with type jsx it converts it to raw vanilla Javascript  -->
+
+<script type="text/jsx">
+
+var Badge = React.createClass({
+  render: function(){
+    return <button className="btn btn-primary" type="button">
+      {this.props.title} <span className="badge">{this.props.number}</span>
+    </button>
+  }
+});
+// NESTING COMPONENT HERE
+var Thumbnail = React.createClass({
+  render: function(){
+    return <div className="thumbnail">
+      <img src={this.props.imageURL} />
+      <div className="caption">
+        <h3>{this.props.heading}</h3>
+        <p>{this.props.description}</p>
+        <p>
+
+          <Badge title={this.props.title} number={this.props.number} />
+        </p>
+      </div>
+    </div>
+  }
+});
+
+
+var ThumbnailList = React.createClass({
+  render: function(){
+    var list = this.props.thumbnailData.map(function(thumbnailProps){
+      return <Thumbnail {...thumbnailProps} />
+    });
+
+    return <div>
+    {list}
+    </div>
+
+  }
+});
+
+
+var options ={
+  thumbnailData: [
+    {
+      title: "See Tutorials",
+      number: 32,
+      imageURL: "http://formatjs.io/img/react.svg",
+      heading: "Learn React",
+      description: "React is a fantastic new library for making fast, dynamic pages."
+    },{
+      title: "See Tutorials",
+      number: 25,
+      imageURL: "http://www.chloechen.io/wp-content/uploads/2015/07/gulp.png",
+      heading: "Learn Gulp",
+      description: "Gulp will speed up your development time."
+    }
+  ]
+};
+
+
+// React, please render this class
+var element = React.createElement(ThumbnailList, options); //2. pass the object into createElement
+
+// React, after you render this class, please place it on my document where I suggest
+ReactDOM.render(element, document.querySelector('.target'));
+
+</script>
