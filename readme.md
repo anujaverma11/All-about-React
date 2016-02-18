@@ -21,7 +21,7 @@ JSX Extenstion of Javascript. It allows you to write HTML inside your Javascript
 - [Static Component](\index.html)
 
 ##### Example of Dynamic Component
-- []()
+- [Dynamic Component](\badge.html)
 
 ##### Example of Nested Component
 - []()
