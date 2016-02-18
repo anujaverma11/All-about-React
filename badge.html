@@ -1,0 +1,54 @@
+<!--
+##### Exploring properties - Customizing Views
+##### Exploring properties - Wiring up your data
+ -->
+
+<head>
+<!-- React -->
+<script src="https://fb.me/react-0.14.7.js"></script>
+<script src="https://fb.me/react-dom-0.14.7.js"></script>
+
+<!-- JSX -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+</head>
+<body>
+</body>
+
+
+
+<!-- JSXTransformer scans the document and finds any tag with type jsx it converts it to raw vanilla Javascript  -->
+
+<script type="text/jsx">
+// define a react component class. HelloWorld is a react class.
+// class implementation must always provide an object, with a defined property called render. And render must be a function.
+//Whatever returns from render function will be rendered on the page.
+// CSS classes are not same as JSX class, CSS classes will be referred to as 'className' and not as 'class'
+
+
+var Badge = React.createClass({
+  render: function(){
+    //3. options object is available in the class as this.props
+
+    return <button className="btn btn-primary" type="button">
+      {this.props.title} <span className="badge">{this.props.number}</span>
+    </button>
+  }
+});
+
+var options = {      //1. Create the object
+  title: 'Inbox',
+  number: 32
+};
+
+// Ask react to render this class - class need to be instantiated. element is a instance of a class
+var element = React.createElement(Badge, options); //2. pass the object into createElement
+
+// When we ask React to render this class, we will tell it where to place the rendered element in the dom. Telling React to put our rendered component into the body tag.
+ReactDOM.render(element, document.body)
+
+</script>
