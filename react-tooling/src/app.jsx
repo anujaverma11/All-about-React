@@ -1,4 +1,3 @@
-// This purpose of this file is bascically bootstrap or do the initial definations and rendering of our top level components. Actually start the kickoff our application.
 
 var options ={
   thumbnailData: [
