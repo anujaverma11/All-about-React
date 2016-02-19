@@ -7,13 +7,7 @@ var reactify = require('reactify'); //help converting jsx files to javascript
 
 gulp.task('default', function(){
   var bundler = watchify(browserify({
-    entries: []
+    entries: ['./src']
   }))
 
-
-
-  gulp.src('src/**')
-    .pipe(react())
-    .pipe(concat('application.js'))
-    .pipe(gulp.dest('./'))
 });
