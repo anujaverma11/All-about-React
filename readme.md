@@ -10,7 +10,8 @@
 - React is all about building reusable components.
 
 
-##### Why Flux?
+##### Why Gulp?
+
 
 
 ##### What is JSX?
@@ -30,6 +31,9 @@ JSX Extenstion of Javascript. It allows you to write HTML inside your Javascript
 
 ##### Example of rendering List of Components
 - [Thumbnail List](\thumbnail-list.html)
+
+
+##### Why Flux?
 
 
 
