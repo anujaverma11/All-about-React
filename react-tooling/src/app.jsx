@@ -1,3 +1,7 @@
+var React = require('react');
+
+var ThumbnailList = require('./thumbnailList');
+
 
 var options ={
   thumbnailData: [
@@ -22,4 +26,4 @@ var options ={
 var element = React.createElement(ThumbnailList, options); //2. pass the object into createElement
 
 // React, after you render this class, please place it on my document where I suggest
-ReactDOM.render(element, document.querySelector('.target'));
+React.render(element, document.querySelector('.container'));

@@ -14,8 +14,9 @@ gulp.task('default', function(){
     cache:{},
     packageCache: {},
     fullPaths: true
-  }))
-  function build(file){
+  }));
+
+function build(file) {
     if (file) gutil.log('Recompiling' + file);
     return bundler
       .bundle()
@@ -23,6 +24,6 @@ gulp.task('default', function(){
       .pipe(source('main.js'))
       .pipe(gulp.dest('./'));
   };
-  build()
-  bundler.on('update',build)
+  build(); // execute build function
+  bundler.on('update',build); //when changes execute build again
 });
