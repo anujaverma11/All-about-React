@@ -1,3 +1,5 @@
+
+
 [Give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes)
 
 
@@ -11,7 +13,13 @@
 
 
 ##### Why Gulp?
+- Gulp is a build System.
+- Can compress and concatenate javascript files.
 
+To compile all the code from JSX to javascript we use a build system called Gulp. Gulp is a node based package. to install gulp we need 'npm'. For this example we will use gulp-react and gulp-concatenate.
+
+##### What Browserify do?
+Browserify lets you require('modules') in the browser by bundling up all of your dependencies. We need Browserify, as In react we put each component into each module.
 
 
 ##### What is JSX?
