@@ -1,7 +1,7 @@
+##### Technologies Used: React, Gulp, Browserify, JSX, Firebase
 
 
 [Give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes)
-
 
 #### React + Flux
 
@@ -26,23 +26,19 @@ Browserify lets you require('modules') in the browser by bundling up all of your
 
 JSX Extenstion of Javascript. It allows you to write HTML inside your Javascript code. JSX must first be compiled from JSX to Javascript.
 
-![alt tag](1.png)
+![alt tag](\examples\1.png)
 
 ##### Example of Static Component
-- [Static Component](\index.html)
+- [Static Component](\examples\index.html)
 
 ##### Example of Dynamic Component
-- [Dynamic Component](\badge.html)
+- [Dynamic Component](\examples\badge.html)
 
 ##### Example of Nested Component
-- [Nested Component](\nested.html)
+- [Nested Component](\examples\nested.html)
 
 ##### Example of rendering List of Components
-- [Thumbnail List](\thumbnail-list.html)
-
-#### React Component State and Events
-
-
+- [Thumbnail List](\examples\thumbnail-list.html)
 
 
 ##### Why Flux?
