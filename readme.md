@@ -9,19 +9,16 @@
 ##### Why React?
 - React is Simple.
 - It only updates the product UI if the data of the application is changed.
+- Easy to use declarative syntax.
+- React is composable - application is comprised with multiple reusable components.
+- Super fast because of a Virtual DOM
 
 ###### Imperative vs Declarative Code
 - Imperative programming is a programming paradigm that uses statements that change a program's state. An imperative programming language uses a sequence of statements to determine how to reach a certain goal. These statements are said to change the state of the program as each one is executed in turn. You are telling your code how to do something. Examples of Imperative programming languages is Java.
 
 - Declarative programming is when you write your code in such a way that it describes what you want to do, and not how you want to do it. It is left up to the compiler to figure out the how. Examples of declarative programming languages are React(for the most part) and SQL.
 
-######
-
-
-
-
-
-
+- [React To Do App](https://github.com/anujaverma11/react-to-do-app)
 
 
 ![alt tag](\examples\1.png)
