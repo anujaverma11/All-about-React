@@ -8,12 +8,12 @@ Why React?
 - React syntax is declarative it updates the view as you code.
 
 For working with React following libraries need to be added:
-'''
+```
    <!-- React -->
     <script src="https://fb.me/react-0.14.1.min.js"></script>
     <script src="https://fb.me/react-dom-0.14.1.min.js"></script>
 
-'''
+```
 
 JSX has been ruled out so we can convert JSX code using Babel tool or NPM react-tools.
 
@@ -24,7 +24,7 @@ As it is using JSX, can write HTML code.
 
 React.render(<component name/>, location)
 
-'''
+```
 <script type="text/jsx">
 
       var HelloWorld = React.createClass({
@@ -39,11 +39,11 @@ React.render(<component name/>, location)
 
       React.render(<HelloWorld name="Sandy"/>, document.getElementById('example'));
 </script>
-'''
+```
 
 Using Babel Try Babel online: https://babeljs.io/repl/ code can be converted from JSX to Javascript
 
-'''
+```
 render: function render() {
 
     return React.createElement(
@@ -58,7 +58,9 @@ render: function render() {
       )
     );
   }
-'''
+```
+
+
 
 
 
