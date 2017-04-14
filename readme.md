@@ -60,6 +60,22 @@ render: function render() {
   }
 ```
 
+To install react-tools use the following command:
+
+```
+npm install -g react-tools
+
+```
+
+to execute the code in src file, execute following command on command line, after cd into your project folder.
+
+```
+jsx src build
+```
+
+
+
+
 
 
 
