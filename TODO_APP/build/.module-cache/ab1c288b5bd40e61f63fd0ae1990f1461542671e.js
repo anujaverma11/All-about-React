@@ -1,11 +1,6 @@
 var Todo = React.createClass({displayName: "Todo",
-
-  getInitialState: function(){
-    return {editing: false}
-  },
   edit: function(){
     alert('edit Todo');
-    this.setState({editing:true})
   },
 
   remove: function(){
@@ -35,17 +30,22 @@ var Todo = React.createClass({displayName: "Todo",
               React.createElement("input", {type: "text", placeholder: "Edit Todo", defaultvalue: this.props.children})
             ), 
 
-            React.createElement("button", {onClick: this.save, className: "btn btn-default btn-sm glyphicon glyphicon-floppy-disk remove pull-right"})
+            React.createElement("button", {onClick: this.save, className: "btn btn-default btn-sm glyphicon glyphicon-trash remove pull-right"})
       ));
   },
 
   render: function() {
-     if(this.state.editing){
-        return this.todoForm();
-     } else {
-        return this.todoDisplay();
-     }
-  },
+    return(
+
+
+        React.createElement("ul", null
+
+        )
+
+
+
+      )
+  }
 });
 
 React.render( React.createElement("div", null, 
@@ -58,7 +58,7 @@ React.render( React.createElement("div", null,
                 ), 
                 React.createElement("ul", null, 
                 React.createElement(Todo, null, "Call Henry"), 
-                React.createElement(Todo, null, "Call Henry"), 
-                React.createElement(Todo, null, "Call Henry")
+                "// ", React.createElement(Todo, {todo: "Call Henry"}), 
+                "// ", React.createElement(Todo, {todo: "Call Henry"})
                 )
               ), document.getElementById('todo'));
