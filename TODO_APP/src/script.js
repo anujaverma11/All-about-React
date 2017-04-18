@@ -13,7 +13,9 @@ var Todo = React.createClass({
   },
 
   save:function(){
-    alert('Todo saved');
+    var val=this.refs.newValue.getDOMNode().value;
+    alert('Todo: '+ val + ' saved');
+    this.setState({editing:false})
   },
 
   todoDisplay:function(){
@@ -32,7 +34,7 @@ var Todo = React.createClass({
     return(
       <li className="todo">
             <span>
-              <input type="text" placeholder="Edit Todo" defaultvalue={this.props.children}/>
+              <input type="text" placeholder="Edit Todo" ref = "newValue" defaultValue={this.props.children}/>
             </span>
 
             <button onClick={this.save} className="btn btn-default btn-sm glyphicon glyphicon-floppy-disk remove pull-right" />
@@ -48,7 +50,11 @@ var Todo = React.createClass({
   },
 });
 
-React.render( <div>
+
+
+var TodoList = React.createClass({
+  render: function(){
+    return(<div>
                 <h1> Things To Do </h1>
                 <div className="form-inline">
                   <div className="form-group">
@@ -61,4 +67,13 @@ React.render( <div>
                 <Todo>Call Henry</Todo>
                 <Todo>Call Henry</Todo>
                 </ul>
-              </div>, document.getElementById('todo'));
+              </div>
+              );
+
+React.render( , document.getElementById('todo'));
+
+
+
+  }
+
+});

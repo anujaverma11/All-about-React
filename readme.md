@@ -73,7 +73,22 @@ to execute the code in src file, execute following command on command line, afte
 jsx src build
 ```
 
+Props define what components "is"
+State define
 
+Render defines UI declaratively based on current props and state.
+
+When the component is mounting constructor defines its state.
+
+
+https://js.coach
+npm install --save bootstarp react-bootstrap;
+install bootstrap css
+
+npm install --save bootswatch
+
+
+React bootstarp
 
 
 
