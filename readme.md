@@ -1,3 +1,15 @@
+Library Details
+|               |  SRC                     | Folder where we put all the source code we write     |
+|     Project   |  public                  | Folder that stores static files, like images         |
+|    Directory  |  node_modules            | Folder that contains all of our project dependencies |
+|               |  package.json            | Records our project dependencies and configures our pro |
+|               |  package-lock.json       | Records the exact version of packages that we install |
+|               |  Readme.md               | instructions - how to use this project                |
+
+
+
+
+
 React is a Javascript library for building user interfaces. It is also considered as 'V' in MVC.
 React was built to solve one problem: building large applications with data that changes over time.
 
