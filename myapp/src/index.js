@@ -3,14 +3,29 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 
 // Create a react component
+function getButtonText() {
+return 'Click on Me again!'
+}
 
 
 const App = () => {
+  const buttonText = {text: 'Click Me!'};
+  const labelText = "Enter name:"
   return (
    <div>
-      <label class = "label" for="name" >Enter name:</label>
+      <label className = "label" for="name" >{labelText}</label> {/*interpolation*/}
       <input id="name" type="text" />
-      <button style={{backgroundColor: 'blue', color: 'white'}}>Submit</button>
+      <button style={{backgroundColor: 'blue', color: 'white'}}>
+      {/*Submit*/}
+      {buttonText.text}
+      </button>
+
+      <button style={{backgroundColor: 'yellow', color: 'black'}}>
+      {/*Submit*/}
+      {getButtonText()}
+
+
+      </button>
     </div>
     );
 };
@@ -39,3 +54,12 @@ ReactDOM.render(<App />, document.querySelector('#root'))
 JSX
 <div style={{ backgroundColor: 'red'}}></div>
 first {  is indicator JS variable and second { indicate JS object. so we are providing JS object. */
+
+
+// Class is JS keyWord and hence during using JSX HTML class will become JSX className.
+
+//JSX can referenceJS Variables.
+/* */
+
+{/*  Values can be references inside JSX */}
+//Objects cannot be used as REACT Child.We can reference the object along with the Key as shown in example above. We can use JS object as long as we are not trying to print them as text, as shown in example buttonText, inside the application
