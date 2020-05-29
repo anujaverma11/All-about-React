@@ -13,7 +13,7 @@ const App = () => {
   const labelText = "Enter name:"
   return (
    <div>
-      <label className = "label" for="name" >{labelText}</label> {/*interpolation*/}
+      <label className = "label" htmlfor="name" >{labelText}</label> {/*interpolation*/}
       <input id="name" type="text" />
       <button style={{backgroundColor: 'blue', color: 'white'}}>
       {/*Submit*/}
@@ -63,3 +63,4 @@ first {  is indicator JS variable and second { indicate JS object. so we are pro
 
 {/*  Values can be references inside JSX */}
 //Objects cannot be used as REACT Child.We can reference the object along with the Key as shown in example above. We can use JS object as long as we are not trying to print them as text, as shown in example buttonText, inside the application
+
