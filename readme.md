@@ -24,3 +24,18 @@ In the upcoming lecture, we will be getting the link for the Semantic UI CDN to 
 
 ### New Library
 faker.js - generate massive amounts of fake data in the browser and node.js
+
+### Creating a reusable component
+
+1. Identify the JSX that appears duplicate
+2. What is the purpose of that block of JSK? Think of a descriptive name for what it does
+3. Create a new file to house this new component - it should have the same name as the component. - React components are named with Proper case - e.g. CommentDetails - C & D capital.
+4. Create a new component in the new file, paste the JSX into it
+5. Make the new component configurable by using React's props 'system'.
+
+
+##### Component Basics
+- To make the component available to the project file, Component should have a export statement at the bottom of component code.
+- Add import statement int he file you want to use the component in.
+- To add one component in another add the
+
