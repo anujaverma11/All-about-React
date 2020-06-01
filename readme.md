@@ -1,121 +1,26 @@
-Library Details
-|               |  SRC                     | Folder where we put all the source code we write     |
-|     Project   |  public                  | Folder that stores static files, like images         |
-|    Directory  |  node_modules            | Folder that contains all of our project dependencies |
-|               |  package.json            | Records our project dependencies and configures our pro |
-|               |  package-lock.json       | Records the exact version of packages that we install |
-|               |  Readme.md               | instructions - how to use this project                |
+To create a new react app use command - npx create-react-app {app-name}
+
+### REACT Components
+
+Communicating with Props
+
+- Component Nesting - component can be shown inside others
 
 
+- Component Re-usability - component can easily be reusable
+- component Configuration - configure a component when it is created.
+
+{/*  Communicating with Props */}
+/*
+- Component Nesting - component can be shown inside others
 
 
+- Component Re-usability - component can easily be reusable
+- Component Configuration - configure a component when it is created.
 
+In the upcoming lecture, we will be getting the link for the Semantic UI CDN to put in our index.html. Since some students have been confused about which link to get I am placing it here for easy access:
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
-
-React is a Javascript library for building user interfaces. It is also considered as 'V' in MVC.
-React was built to solve one problem: building large applications with data that changes over time.
-
-Why React?
-
-- React is compose-able, so the application is broken down in small pieces of reusable components or module
-- React interacts with a virtual DOM and eliminates the concept of DOM manipulation
-- React syntax is declarative it updates the view as you code.
-
-For working with React following libraries need to be added:
-```
-   <!-- React -->
-    <script src="https://fb.me/react-0.14.1.min.js"></script>
-    <script src="https://fb.me/react-dom-0.14.1.min.js"></script>
-
-```
-
-JSX has been ruled out so we can convert JSX code using Babel tool or NPM react-tools.
-
-#### First React Component
-
-Define a variable "HelloWorld" with React.createClass. Define render function and return the component.
-As it is using JSX, can write HTML code.
-
-React.render(<component name/>, location)
-
-```
-<script type="text/jsx">
-
-      var HelloWorld = React.createClass({
-        render: function() {
-          return (
-                  <div>
-                    <h1>Hello {this.props.name}!</h1>
-                  </div>
-          );
-        }
-      });
-
-      React.render(<HelloWorld name="Sandy"/>, document.getElementById('example'));
-</script>
-```
-
-Using Babel Try Babel online: https://babeljs.io/repl/ code can be converted from JSX to Javascript
-
-```
-render: function render() {
-
-    return React.createElement(
-      "div",
-      null,
-      React.createElement(
-        "h1",
-        null,
-        "Hello ",
-        this.props.name,
-        "!"
-      )
-    );
-  }
-```
-
-To install react-tools use the following command:
-
-```
-npm install -g react-tools
-
-```
-
-to execute the code in src file, execute following command on command line, after cd into your project folder.
-
-```
-jsx src build
-```
-
-Props define what components "is"
-State define
-
-Render defines UI declaratively based on current props and state.
-
-When the component is mounting constructor defines its state.
-
-
-https://js.coach
-npm install --save bootstarp react-bootstrap;
-install bootstrap css
-
-npm install --save bootswatch
-
-
-React bootstarp
-
-https://github.com/anujaverma11/intro-to-react - Eric Vicenti
-
-
-
-
-
-
-
-
-
-
-
-
-
+### New Library
+faker.js - generate massive amounts of fake data in the browser and node.js
