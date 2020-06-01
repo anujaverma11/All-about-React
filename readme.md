@@ -37,5 +37,9 @@ faker.js - generate massive amounts of fake data in the browser and node.js
 ##### Component Basics
 - To make the component available to the project file, Component should have a export statement at the bottom of component code.
 - Add import statement int he file you want to use the component in.
-- To add one component in another add the
+- To add one component in another add the component name in tag for like <CommentDetail />. Interpolation will not be used, JS variables need to be used using interpolation. Components are one exception to the interpolation rule.
+
+##### React Props
+- Props are a system for passing data from a parent component to a child component
+- Goal is to customize or configure a child component.
 
