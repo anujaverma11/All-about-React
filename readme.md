@@ -42,4 +42,6 @@ faker.js - generate massive amounts of fake data in the browser and node.js
 ##### React Props
 - Props are a system for passing data from a parent component to a child component
 - Goal is to customize or configure a child component.
+- Props are short for property
+- Providing props from parent to child for e.g. <CommonDetail author = "Sam" />
 
