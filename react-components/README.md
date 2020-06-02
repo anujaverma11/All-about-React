@@ -1,2 +1,2 @@
 
-![Application Image]("'"public/AppScreenShot.png")
+![Application Image](public/AppScreenShot.png)
