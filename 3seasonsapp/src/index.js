@@ -5,18 +5,30 @@ import ReactDom from 'react-dom'
 
 
 class App extends React.Component {
-  render() {
-    window.navigator.geolocation.getCurrentPosition(
-    position => console.log(position),
-    err => console.log(err)
+// In JS class the constructor function is called anytime an instance of this class is created.
+//Anytime an instance is created the constructor function is automatically called before anything else, so it is a good place to initialize the state
+
+   constructor(props){
+      super(props); //to make sure constructor function of React.component is called we call Super function.
+
+      this.state = { lat: null }; //this is state object initialized. null tells that we dont know the value yet.
+      window.navigator.geolocation.getCurrentPosition(
+      position => {
+        this.setState({lat: position.coords.latitude}) //never do the direct assignment to the state function.
+      },
+      err => console.log(err)
     );
-    return <div>Latitude: </div>;
+   }
+
+  // React says we have to define Render!
+  render() {
+    return <div>Latitude: {this.state.lat}</div>;
   }
 }
 
 ReactDom.render(<App />, document.querySelector('#root'));
 
-{/*
+/*
 1. JS File loaded by browser
 2. App component gets created
 3. We call geolocation service
@@ -34,6 +46,8 @@ Rules of State
 - 'State' is a JS object that contains data relevant to a component to (almost)instantly rerender
 - State must be initialized when a component is created.
 - State can only be updated using the function 'setState'
-*/}
 
-Rules of State
+All the steps:
+-
+*/
+
