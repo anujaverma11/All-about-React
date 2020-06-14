@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To create a new react app use command - npx create-react-app {app-name}
 
-## Available Scripts
+### REACT Components
 
-In the project directory, you can run:
+Communicating with Props
 
-### `npm start`
+- Component Nesting - component can be shown inside others
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Component Re-usability - component can easily be reusable
+- component Configuration - configure a component when it is created.
 
-### `npm test`
+{/*  Communicating with Props */}
+/*
+- Component Nesting - component can be shown inside others
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- Component Re-usability - component can easily be reusable
+- Component Configuration - configure a component when it is created.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the upcoming lecture, we will be getting the link for the Semantic UI CDN to put in our index.html. Since some students have been confused about which link to get I am placing it here for easy access:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### New Library
+faker.js - generate massive amounts of fake data in the browser and node.js
 
-### `npm run eject`
+### Creating a reusable component
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Identify the JSX that appears duplicate
+2. What is the purpose of that block of JSK? Think of a descriptive name for what it does
+3. Create a new file to house this new component - it should have the same name as the component. - React components are named with Proper case - e.g. CommentDetails - C & D capital.
+4. Create a new component in the new file, paste the JSX into it
+5. Make the new component configurable by using React's props 'system'.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+##### Component Basics
+- A Component is a function or a class, which produces HTML to show the user and handle feedback from the user.
+- To make the component available to the project file, Component should have a export statement at the bottom of component code.
+- Add import statement int he file you want to use the component in.
+- To add one component in another add the component name in tag for like <CommentDetail />. Interpolation will not be used, JS variables need to be used using interpolation. Components are one exception to the interpolation rule.
+- Functional Component is good for simple content. Class Components is good for about everything.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+##### React Props
+- Props are a system for passing data from a parent component to a child component
+- Goal is to customize or configure a child component.
+- Props are short for property
+- Providing props from parent to child for e.g. <CommonDetail author = "Sam" />
 
-## Learn More
+##### Class Based Components
+Benefits of class Based components
+- Easier Code organization
+- Can use 'state' -  easier to handle user input
+- Understand lifecycle events - Easier to do things the app first starts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### REACT Component and State
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Rules of Class Components
+ - Must be A Javascript Class
+ - Must extend (subclass) React.Component
+ - Must define a 'render' method that returns some amount of JSX
 
-### Code Splitting
+Rules of State
+- Only usable with Class Components
+- You will confuse props with state
+- 'State' is a JS object that contains data relevant to a component to (almost) instantly rerender
+- State must be initialized when a component is created.
+- State can only be updated using the function 'setState'
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
