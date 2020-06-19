@@ -181,120 +181,17 @@ componentDidMount() is called. This method will be automatically called one time
 - After the componentDidMount() method gets called our component essentially will sit around and wait
 for an update.
 
-The component will render itself or essentially update itself.
+componentDidUpdate()- anytime setState method is called. The component will render itself or essentially update itself. Anytime that happens another lifecycle method is called componentDidMount() will be called automatically.
 
-Anytime that happens another lifecycle method is called component did update will be called automatically.
 
-And so once again if we decided we wanted to we could optionally define a function inside if you're
+If we decide to no longer show this component the componentWillUnmount() method will be automatically called this method will be usually used if we want to do some kind of cleanup after our component.
 
-called very specifically component.
+> Constructor Function - Good Place to do one time setup
+> render - Avoid doing anything beside returning JSX
+> componentDidMount - Good Place to do Data loading
+> componentDidUpdate - Good Place to do more data loading when state/props change
+> ComponentWillUnmount - Good place to do cleanup (especially for not react stuff)
 
-Did update if we defined that function it will be called automatically any time that our component updates
-
-itself.
-
-I'm going to leave that one again as well.
-
-Then after that our component might just sit around and wait until it gets another update.
-
-If it gets another update component to it update we'll be called a second time or third time fourth
-
-time.
-
-However many times our component gets updated at some point in time.
-
-We might decide to stop showing this component on the screen.
-
-We'll talk about the scenarios under which that would occur later on inside the course.
-
-So if for some reason we decide to no longer show this method we are asked to meet show this component
-
-the component will unmount method will be automatically called this method will be usually used if we
-
-want to do some kind of cleanup after our component.
-
-And of course We'll discuss when or what scenarios that would occur to get a better understanding of
-
-some of these different lifecycle methods.
-
-I want to implement component did mount and component did update inside of our component and just put
-
-some basic console logs inside there and just say OK yeah these things get automatically called at some
-
-point in time.
-
-So back inside my editor once again right above the render method I'm going to define component did
-
-mount like so.
-
-And inside if you are I'll put a simple console log that says my component will say my component was
-
-rendered to the screen will be really descriptive here.
-
-Like so.
-
-And then underneath that I'm going to define a second life cycle method component did update I'll put
-
-a council log inside of your that says my component was just updated it rerun if I can spell it for
-
-you render it.
-
-There we go.
-
-All right.
-
-Let's then save this and we'll flip back over to a browser and I just want to see these console logs
-
-appear.
-
-All right so I can flip back over and I got to make sure I port my console and we'll see that we already
-
-have the two console logs appear right here.
-
-So the first consul log is from the component.
-
-Did it mount lifecycle method.
-
-It's going to be called automatically any time our component shows up on the screen.
-
-We then saw the component did update method.
-
-It did update method was called because after our geolocation request succeeded or in this case was
-
-denied from me in particular are a component called Set state on itself.
-
-It rebranded itself.
-
-And so the component did update lifecycle method was invoked.
-
-Now one thing I want to mention really quickly here that I did not make tremendously clear on the diagram
-
-is that any time that component did update gets called right before it technically render will be called.
-
-So any time our computer updates the render method will be called will return some GSX that will be
-
-shown on the screen and then right after that component did update will be invoked.
-
-So in general as I mentioned previously the render method is going to be called many many many times.
-
-Anytime we decide to update our component.
-
-All right.
-
-So I'm going to remove those two lifecycle methods right there I just want to give you a quick demonstration.
-
-We are going to re-implement component did mount just a second but we will type that back in when we
-
-decide that we actually need it.
-
-Now let's take a quick pause right here.
-
-I want to very quickly tell you some of the different reasons that we might use these different lifecycle
-
-methods so that you at least have some context and understanding of why we care about these things at
-
-all.
-
-So quick pause and I'll see you in just a minute.
+#### Why Component Lifecycle Methods?
 
 
