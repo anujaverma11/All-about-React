@@ -186,12 +186,21 @@ componentDidUpdate()- anytime setState method is called. The component will rend
 
 If we decide to no longer show this component the componentWillUnmount() method will be automatically called this method will be usually used if we want to do some kind of cleanup after our component.
 
-> Constructor Function - Good Place to do one time setup
-> render - Avoid doing anything beside returning JSX
-> componentDidMount - Good Place to do Data loading
-> componentDidUpdate - Good Place to do more data loading when state/props change
-> ComponentWillUnmount - Good place to do cleanup (especially for not react stuff)
 
 #### Why Component Lifecycle Methods?
+You can think of React lifecycle methods as the series of events that happen from the birth of a React component to its death.
+
+Every component in React goes through a lifecycle of events. I like to think of them as going through a cycle of birth, growth, and death.
+
+Mounting – Birth of your component
+Update – Growth of your component
+Unmount – Death of your component
+
+##### Cheat sheet
+1. Constructor Function - Good Place to do one time setup
+2. Render - Avoid doing anything beside returning JSX
+3. ComponentDidMount - Good Place to do Data loading
+4. ComponentDidUpdate - Good Place to do more data loading when state/props change
+5. ComponentWillUnmount - Good place to do cleanup (especially for not react stuff)
 
 
