@@ -28,8 +28,7 @@ class App extends React.Component {
     );
    }
 
-  // React says we have to define Render!
-  render() {
+   renderContent(){
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
@@ -40,8 +39,19 @@ class App extends React.Component {
       //<div>Latitude: {this.state.lat}</div>;
     }
 
-    return <Spinner message="Please accept location request"/>; //passing message to props
-  }
+    return <Spinner message="Please accept location request"/>; //›passing message to props
+   }
+
+
+  // React says we have to define Render!
+  render() {
+    return (
+      <div className = "border red">
+        {this.renderContent()}
+      </div>
+      );
+   }
+
 }
 
 ReactDom.render(<App />, document.querySelector('#root'));
