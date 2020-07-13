@@ -1,26 +1,21 @@
-// Controlled Element
+// Uncontrolled Element
 
 import React from 'react';
 
 class SearchBar extends React.Component {
-  state = {term: ''};
+  onInputChange(event){
+    {/*As soon as someone type anyting in the text box, onInputchange function is called and pass the event object to the function. Its a JS object, which contains knowledge of event just occurred*/}
+    console.log(event.target.value);
 
-onFormSubmit(event){
-  event.preventDefault();
-  console.log(this.state.term); //closure
-
-}
+  }
 
   render() {
     return (
       <div className = "ui segment">
-        <form onSubmit={this.onFormSubmit} className="ui form">
+        <form className="ui form">
           <div className="field">
             <label>Image Search</label>
-            <input type="text"
-                   value={this.state.term}
-                   onChange={e => this.setState ({term: e.target.value}) } />
-
+            <input type="text" onChange={this.onInputChange}/>
                   {/*onChange is a event handler this.onInputChange callback function, so no parenthesis.
                   onChange is called when a User changes text in an input.
                   onClick is called when a User clicks on something
