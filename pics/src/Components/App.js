@@ -11,8 +11,6 @@ import ImageList from './ImageList';
     </div>
     );
 }; */
-//client_Id = process.env.REACT_APP_AXIOS_API_KEY
-console.log()
 
 
 class App extends React.Component {
